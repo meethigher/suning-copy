@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/*
+rem不好维护的原因：
+1.设备会更新
+2.设计稿尺寸
+3.预设基准值
+*/
+@media (min-width: 320px) {
+    html {
+        font-size: 42.66666667px;
+    }
+}
+@media (min-width: 360px) {
+    html {
+        font-size: 48px;
+    }
+}
+@media (min-width: 375px) {
+    html {
+        font-size: 50px;
+    }
+}
+@media (min-width: 384px) {
+    html {
+        font-size: 51.2px;
+    }
+}
+@media (min-width: 400px) {
+    html {
+        font-size: 53.33333333px;
+    }
+}
+@media (min-width: 414px) {
+    html {
+        font-size: 55.2px;
+    }
+}
+@media (min-width: 424px) {
+    html {
+        font-size: 56.53333333px;
+    }
+}
+@media (min-width: 480px) {
+    html {
+        font-size: 64px;
+    }
+}
+@media (min-width: 540px) {
+    html {
+        font-size: 72px;
+    }
+}
+@media (min-width: 640px) {
+    html {
+        font-size: 85.33333333px;
+    }
+}
+@media (min-width: 720px) {
+    html {
+        font-size: 96px;
+    }
+}
+@media (min-width: 750px) {
+    html {
+        font-size: 100px;
+    }
+}
+/*========reset css===============*/
+*,
+*::before,
+*::after {
+    /*所有的标签和伪元素都选中*/
+    margin: 0;
+    padding: 0;
+    /*移动端常用布局是非固定像素布局*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*点击高亮效果清除*/
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #333;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+input,
+textarea {
+    border: none;
+    outline: none;
+    /*不允许改变尺寸*/
+    resize: none;
+    /*元素的外观 none没有任何样式*/
+    -webkit-appearance: none;
+}
+/*===============common css===========*/
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+/*清除浮动*/
+.clearFix::before,
+.clearFix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+.m_l10 {
+    margin-left: 10px;
+}
+.m_r10 {
+    margin-right: 10px;
+}
+.m_t10 {
+    margin-top: 10px;
+}
+.m_b10 {
+    margin-bottom: 10px;
+}
+.w_50 {
+    width: 50%;
+}
+.w_33 {
+    width: 33.333333%;
+}
+.bl {
+    border-left: 1px solid #ccc;
+}
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+.br {
+    border-right: 1px solid #ccc;
+}
+/*版心容器*/
+.sn_container {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+}
+.sn_topBar {
+    width: 100%;
+    height: 0.9rem;
+    background-color: #FFBD00;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+}
+.sn_topBar a {
+    position: absolute;
+    top: 0;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+.sn_topBar a.icon_category {
+    left: 0;
+    background: url("../images/icon_category.png") no-repeat center / 0.44rem 0.7rem;
+}
+.sn_topBar a.icon_cart {
+    right: 0;
+    background: url("../images/icon_cart.png") no-repeat center / 0.63rem 0.68rem;
+}
+.sn_topBar form {
+    padding: 0 0.9rem;
+    width: 100%;
+    position: relative;
+}
+.sn_topBar form .icon_search {
+    display: block;
+    width: 0.27rem;
+    height: 0.28rem;
+    background: url("../images/icon_search.png") no-repeat center / 0.27rem 0.28rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 1rem;
+}
+.sn_topBar form input {
+    width: 100%;
+    height: 0.6rem;
+    margin-top: 0.15rem;
+    border-radius: 0.05rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 0.24rem;
+    padding-left: 0.5rem;
+}
+.sn_banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.sn_banner ul:first-child {
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+}
+.sn_banner ul:first-child li {
+    width: 10%;
+    float: left;
+}
+.sn_banner ul:first-child li a {
+    display: block;
+    width: 100%;
+}
+.sn_banner ul:first-child li a img {
+    display: block;
+    width: 100%;
+}
+.sn_banner ul:last-child {
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.2rem;
+}
+.sn_banner ul:last-child li {
+    float: left;
+    margin-left: 0.12rem;
+    width: 0.12rem;
+    height: 0.12rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.sn_banner ul:last-child li.now {
+    background-color: #FFBD00;
+}
+.sn_nav {
+    width: 100%;
+    padding: 0.1rem;
+}
+.sn_nav ul {
+    width: 100%;
+}
+.sn_nav ul li {
+    width: 20%;
+    float: left;
+}
+.sn_nav ul li a {
+    display: block;
+    width: 100%;
+}
+.sn_nav ul li a img {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0 auto;
+}
+.sn_nav ul li a p {
+    text-align: center;
+    font-size: 0.2rem;
+    color: #666;
+}
+.sn_tabs {
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+.sn_tabs ul {
+    width: 100%;
+}
+.sn_tabs ul li {
+    width: 20%;
+    float: left;
+    padding-top: 0.1rem;
+}
+.sn_tabs ul li a {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.sn_tabs ul li a span {
+    font-size: 0.4rem;
+}
+.sn_tabs ul li a p {
+    font-size: 0.2rem;
+    color: #666;
+}
+/*# sourceMappingURL=index.css.map */

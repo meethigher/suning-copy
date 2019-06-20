@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @media screen and (min-width:320px) {
+            html {
+                font-size:50px;
+            }
+        }
+        @media screen and (min-width:414px) {
+            html {
+                font-size:64px;
+            }
+        }
+        @media screen and (min-width:640px) {
+            html {
+                font-size:100px;
+            }
+        }
+        body {
+            font-size:20px;
+        }
+        header {
+            width:100%;
+            height:1rem;
+            line-height:1rem;
+            background-color: green;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<!--1.伸缩布局 flex-->
+<!--2.流式布局 百分比-->
+<!--3.响应式布局 媒体查询-->
+<!--共同点：元素只能做到宽度的适配(图片除外)-->
+<!--适配方案rem:宽度和高度都能做到适配（等比缩放）-->
+<!--4.rem布局-->
+<!--通过控制html上的字体大小去控制页面上所有以rem为单位的基准值控制尺寸-->
+<!--4.1把px转化为rem-->
+<!--4.2页面制作的时候，psd上量取的px转成rem使用-->
+<!--4.3怎么换算？预设一个基准值，方便计算，100px-->
+<!--4.4适配的时候，设置基准值 320px 50px 怎么算（640px 100px===320px 50px）-->
+<!--4.5换算公式：当前rem基准值=预设的基准值/设计稿宽度*当前设备的宽度-->
+<header>购物车</header>
+</body>
+</html>
